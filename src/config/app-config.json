@@ -1,0 +1,9 @@
+{
+  "region": "eu-west-2",
+  "userPool": "eu-west-2_0aZA1Fves",
+  "userPoolBaseUri": "https://basicframework.auth.eu-west-2.amazoncognito.com",
+  "clientId": "5qr3f889gab8c94pfolg5s0nhm",
+  "callbackUri": "http://localhost:3000/callback",
+  "signoutUri": "http://localhost:3000",
+  "tokenScopes": ["email", "openid", "profile"]
+}
