@@ -41,6 +41,7 @@ const getCognitoSignInUri = () => {
   }/login?response_type=code&client_id=${appConfig.clientId}&redirect_uri=${
     appConfig.callbackUri
   }`;
+  console.info(signinUri);
   return signinUri;
 };
 
