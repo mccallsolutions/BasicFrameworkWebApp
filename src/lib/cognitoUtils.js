@@ -55,6 +55,7 @@ const parseCognitoWebResponse = href => {
         resolve(result);
       },
       onFailure: function(err) {
+        console.debug(err);
         reject(new Error("Failure parsing Cognito web response: " + err));
       }
     };
@@ -68,6 +69,7 @@ const getCognitoSession = () => {
     const cognitoUser = createCognitoUser();
     cognitoUser.getSession((err, result) => {
       if (err || !result) {
+        console.debug(err);
         reject(new Error("Failure getting Cognito session: " + err));
         return;
       }
