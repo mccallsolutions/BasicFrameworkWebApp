@@ -20,7 +20,9 @@ function mapDispatchToProps(dispatch) {
 class Callback extends Component {
   // If a Cognito auth code is in the URL (could be a hash or query component), init the new session
   componentDidMount() {
+    console.info("1:" + window.location.href);
     if (this.props.location.hash || this.props.location.search) {
+      console.info("2");
       this.props.initSessionFromCallbackURI(window.location.href);
     }
   }
@@ -34,6 +36,7 @@ class Callback extends Component {
       return <Redirect to="/" />;
     }
 
+    console.info("div bro");
     return <div />;
   }
 }

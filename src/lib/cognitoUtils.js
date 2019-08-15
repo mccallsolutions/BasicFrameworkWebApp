@@ -41,16 +41,13 @@ const getCognitoSignInUri = () => {
   }/login?response_type=code&client_id=${appConfig.clientId}&redirect_uri=${
     appConfig.callbackUri
   }`;
-  console.info(signinUri);
   return signinUri;
 };
 
 // Parse the response from a Cognito callback URI (assumed a token or code is in the supplied href). Returns a promise.
 const parseCognitoWebResponse = href => {
   return new Promise((resolve, reject) => {
-    console.info(href);
     const auth = createCognitoAuth();
-    console.info(auth);
 
     // userHandler will trigger the promise
     auth.userhandler = {
@@ -58,12 +55,9 @@ const parseCognitoWebResponse = href => {
         resolve(result);
       },
       onFailure: function(err) {
-        console.error(err);
         reject(new Error("Failure parsing Cognito web response: " + err));
       }
     };
-
-    console.info(href);
     auth.parseCognitoWebResponse(href);
   });
 };
@@ -74,7 +68,6 @@ const getCognitoSession = () => {
     const cognitoUser = createCognitoUser();
     cognitoUser.getSession((err, result) => {
       if (err || !result) {
-        console.error(err);
         reject(new Error("Failure getting Cognito session: " + err));
         return;
       }
