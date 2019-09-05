@@ -2,8 +2,8 @@
   "region": "eu-west-2",
   "userPool": "eu-west-2_0aZA1Fves",
   "userPoolBaseUri": "https://basicframework.auth.eu-west-2.amazoncognito.com",
-  "clientId": "13q9427qacdnlmqmtfbpapaj58",
-  "callbackUri": "https://master.d1ezg5iqdia2pb.amplifyapp.com/callback",
-  "signoutUri": "https://master.d1ezg5iqdia2pb.amplifyapp.com",
+  "clientId": "1mp17b7kjtob2t7fl513ebeh2j",
+  "callbackUri": "https://develop.d5ounzda4ght3.amplifyapp.com/callback",
+  "signoutUri": "https://develop.d5ounzda4ght3.amplifyapp.com",
   "tokenScopes": ["email", "openid", "profile"]
 }
